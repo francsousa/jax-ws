@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 
@@ -20,7 +21,7 @@ public class EstoqueWS {
 	
 	@WebMethod(operationName = "todosOsItens")
 	@WebResult(name = "itens")
-	public ListaItens getItens(Filtros filtros) {
+	public ListaItens getItens(@WebParam(name="filtros") Filtros filtros) {
 		
 		System.out.println("Chamando getItens()");
 		List<Filtro> lista = filtros.getLista();
