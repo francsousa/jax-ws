@@ -17,6 +17,7 @@ public class EstoqueWS {
 	
 	@WebMethod(operationName = "todosOsItens")
 	@ResponseWrapper(localName = "itens")
+//	@RequestWrapper(localName = "listaItens")
 	@WebResult(name = "item")
 	public List<Item> getItens() {
 		
